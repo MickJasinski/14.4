@@ -69,7 +69,6 @@ var MovieImage = React.createClass({
   }
 });
 
-// =============== THIS BIT SUCKS =================
 
 var MovieList = React.createClass({
   propTypes: {
@@ -88,10 +87,10 @@ var MovieList = React.createClass({
 
 var element = React.createElement('div', {},
   React.createElement('h1', {}, 'Lista filmów'),
-  React.createElement(MovieList, {})
+  React.createElement(MovieList, {
+    item: movies
+  })
 );
-
-//  ===============================================
 
 
 ReactDOM.render(element, document.getElementById('app'));
